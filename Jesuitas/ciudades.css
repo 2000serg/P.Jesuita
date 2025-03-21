@@ -2,7 +2,10 @@ body{
 	width: 1000px;
 	margin: 0 auto;
 }
+
 form{
+	padding-top: 20px;
+	height: 100px;
 	margin-left:2px;
 	margin-right:2px;
 	padding-left:20px;
@@ -11,5 +14,6 @@ form{
 	border-radius:10px;
 	background-color:lightyellow;
 	box-shadow: 4px 4px 10px black;
+	text-align:center;
 }
 	

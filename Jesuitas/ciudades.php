@@ -20,51 +20,8 @@
 	$sql="SELECT ip, lugar from lugar;"; //Prepara la consulta
 	echo $sql;	//Para probar
 	$resultado=$conexion->query($sql);
+
+	while($fila=$resultado->fetch_array()){
+		echo '<option class="visitas" value="'.$fila["ip"]'."------".$fila["firma"]."</p>";
+		}
 ?>
-
-<!DOCTYPE html>
-<html class="jesuitas">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta lang="es"/>
-		<title>Formulario</title>
-		<link rel="stylesheet" href="./ciudades.css">
-	</head>
-	<body class="jesuitas">
-		<h1 class="jesuitas">Ciudades</h1>
-		<br><br><br>
-		<form class="jesuitas" method="POST" action="./jesuitas.php"> 
-			<label> Lugar </label>
-			<select id="ciudades" class="visitas" name="select_ciudades" >
-				<option class="visita" value="124.10.6.0">Madrid
-				<option class="visita" value="124.10.6.1">Sevilla
-				<option class="visita" value="124.10.6.2">Cordoba
-				<option class="visita" value="124.10.6.3">Caceres
-				<option class="visita" value="124.10.6.4">Valencia
-				<option class="visita" value="124.10.6.5">Vigo
-			
-			</select>
-			<input type="submit" name="Enviar">
-		</form>
-		 <?php
-		while($fila=$resultado->fetch_array()){
-			echo '<option class="visitas" value="'.$fila["ip"]'."------".$fila["firma"]."</p>";
-		}*/
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</body>
-</html>
